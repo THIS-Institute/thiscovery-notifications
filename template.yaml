@@ -19,7 +19,7 @@ Resources:
                 type: aws_proxy
                 uri: !Sub arn:${AWS::Partition}:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${HelloWorldFunction.Arn}/invocations
               responses: {}
-      EndpointConfiguration: PRIVATE
+      EndpointConfiguration: REGIONAL
       TracingEnabled: true
   HelloWorldFunction:
     Type: AWS::Serverless::Function
